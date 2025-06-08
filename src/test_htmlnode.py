@@ -16,7 +16,8 @@ class TestHTMLNode(unittest.TestCase):
 
     def test_repr(self):
         node = htmlnode.HTMLNode("div", "Hello World", None, {'attr': "test_div"})
-        self.assertEqual(node.__repr__(), '<div attr="test_div">Hello World</div>')
+        self.assertEqual(node.__repr__(), 'tag:div\nvalue:Hello World\nchildren:None\nprops:{\'attr\': \'test_div\'}')
+        
 
 if __name__ == "__main__":
     unittest.main()
